@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:sim_phone_captain/models/api_response/all_captain_api_response.dart';
 import 'package:sim_phone_captain/resources/api_providers/customer_orders_get_api.dart';
 import 'package:sim_phone_captain/resources/api_providers/sim_order_post_api.dart';
@@ -81,8 +82,8 @@ class Repository {
     return CaptainSimGetApi().captainAllSimsRequest(id);
   }
 
-  Future<UpdateUserApiResponse> updateUser(FormData data) async {
-    return UpdateUserPutApi().updateUserRequest(data);
+  Future<UpdateUserApiResponse> updateUser({String ? name,String ? phone,String ? address, XFile ?imageFile}) async {
+    return UpdateUserPutApi().updateUserRequest(name: name,address: address,phone: phone,imageFile: imageFile);
   }
   Future<CaptainOrderStatusApiResponse> orderStatusChangeRequest({required String orderId}) async{
     return CustomerOrdersGetApi().captainOrdersStatusRequest(orderId: orderId);

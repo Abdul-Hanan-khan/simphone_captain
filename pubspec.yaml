@@ -52,7 +52,8 @@ dependencies:
   http_parser: ^4.0.0
   maps_launcher: ^2.0.1
   intl: ^0.17.0
-  get:
+#  get:
+  http: ^0.13.5
 
 
 
