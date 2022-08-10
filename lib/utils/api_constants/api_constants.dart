@@ -1,7 +1,9 @@
 class ApiConstants {
   ApiConstants._();
+  // "https://simphoneserver.alliancetechltd.com"
 
-  static const String baseUrl = "https://simphoneserver.herokuapp.com";
+  // static const String baseUrl = "https://simphoneserver.herokuapp.com";
+  static const String baseUrl = "https://simphoneserver.alliancetechltd.com";
   static const String signUp = "$baseUrl/api/users/customer";
   static const String login = "$baseUrl/api/auth/mobileLogin";
   static const String allSims = "$baseUrl/api/sims/complete";

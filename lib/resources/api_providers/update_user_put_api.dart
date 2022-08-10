@@ -44,7 +44,7 @@ class UpdateUserPutApi {
       request.fields['phone'] = phone!;
 
       if(imageFile != null){
-        http.MultipartFile multipartFile = await http.MultipartFile.fromPath('avatar', imageFile!.path, );
+        http.MultipartFile multipartFile = await http.MultipartFile.fromPath('avatar', imageFile.path, );
         request.files.add(multipartFile);
         print(multipartFile);
       }
